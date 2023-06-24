@@ -1,4 +1,4 @@
-from oop import Bank, Account, AccountHolder
+from bank_structure import Bank, Account, AccountHolder
 import numpy as np
 from datetime import date, datetime, timedelta
 

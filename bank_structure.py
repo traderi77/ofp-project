@@ -30,9 +30,10 @@ class Bank:
         else:
             print("This person cannot open the desired accout. Check if they're old enough/too young.")
             self.account_holders.remove(account_holder)
+
             del account_holder
             return
-
+        
         self.accounts.append(account)
         account_holder.count_of_accounts += 1
         print("\nAccount opened up successfully!")
@@ -114,7 +115,6 @@ class Bank:
 
 class AccountHolder:
     def __init__(self, first_name, last_name, date_of_birth, plz, city, address):
-
 
         birthday = date(date_of_birth.year, date_of_birth.month, date_of_birth.day)
         self.young_person = birthday >= date.today() - timedelta(days=365 * 18)

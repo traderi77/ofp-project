@@ -1,23 +1,6 @@
-from oop import Bank, Account, AccountHolder
+from bank_structure import Bank, Account, AccountHolder
 from bookkeeping import BookingSystem
 from datetime import date, datetime, timedelta
-
-bank = Bank()
-booking_system = BookingSystem(bank)
-
-bank.open_account("Emma", "Davis", datetime(1991, 3, 5), "13579", "City", "Lane", "private", "Emma's Personal Account")
-bank.open_account("Michael", "Wilson", datetime(2000, 9, 15), "24680", "Town", "Street", "youth", "Michael's Youth Account")
-bank.open_account("Sophia", "Lee", datetime(1994, 7, 20), "98765", "City", "Avenue", "private", "Sophia's Personal Account")
-bank.open_account("Daniel", "Thomas", datetime(1999, 11, 18), "56789", "Town", "Road", "youth", "Daniel's Youth Account")
-bank.open_account("Olivia", "Brown", datetime(1993, 2, 25), "34567", "City", "Lane", "private", "Olivia's Personal Account")
-bank.open_account("William", "Taylor", datetime(2010, 6, 10), "87654", "Town", "Street", "youth", "William's Youth Account")
-bank.open_account("Ava", "Martinez", datetime(1997, 9, 3), "98765", "City", "Avenue", "private", "Ava's Personal Account")
-bank.open_account("James", "Garcia", datetime(2002, 8, 12), "43210", "Town", "Road", "youth", "James's Youth Account")
-bank.open_account("Isabella", "Clark", datetime(2016, 5, 21), "56789", "City", "Lane", "private", "Isabella's Personal Account")
-bank.open_account("Ethan", "Anderson", datetime(2003, 12, 8), "12345", "Town", "Street", "youth", "Ethan's Youth Account")
-
-bank.print_account_holders()
-bank.get_account(123)
 
 def run_interface():
     while True:
@@ -122,4 +105,26 @@ def run_interface():
             print("\nInvalid choice. Please try again.")
         print()
 
-run_interface()
+def main():
+    bank = Bank()
+    booking_system = BookingSystem(bank)
+
+
+    bank.open_account("Emma", "Davis", datetime(1991, 3, 5), "13579", "City", "Lane", "private", "Emma's Personal Account")
+    bank.open_account("Michael", "Wilson", datetime(2000, 9, 15), "24680", "Town", "Street", "youth", "Michael's Youth Account")
+    bank.open_account("Sophia", "Lee", datetime(1994, 7, 20), "98765", "City", "Avenue", "private", "Sophia's Personal Account")
+    bank.open_account("Daniel", "Thomas", datetime(1999, 11, 18), "56789", "Town", "Road", "youth", "Daniel's Youth Account")
+    bank.open_account("Olivia", "Brown", datetime(1993, 2, 25), "34567", "City", "Lane", "private", "Olivia's Personal Account")
+    bank.open_account("William", "Taylor", datetime(2010, 6, 10), "87654", "Town", "Street", "youth", "William's Youth Account")
+    bank.open_account("Ava", "Martinez", datetime(1997, 9, 3), "98765", "City", "Avenue", "private", "Ava's Personal Account")
+    bank.open_account("James", "Garcia", datetime(2002, 8, 12), "43210", "Town", "Road", "youth", "James's Youth Account")
+    bank.open_account("Isabella", "Clark", datetime(2016, 5, 21), "56789", "City", "Lane", "private", "Isabella's Personal Account")
+    bank.open_account("Ethan", "Anderson", datetime(2003, 12, 8), "12345", "Town", "Street", "youth", "Ethan's Youth Account")
+
+    bank.print_account_holders()
+    bank.get_account(123)
+
+    run_interface
+
+if __name__ == "__main__":
+    main()
